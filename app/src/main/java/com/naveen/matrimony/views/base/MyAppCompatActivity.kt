@@ -306,6 +306,7 @@ abstract class MyAppCompatActivity : AppCompatActivity() {
         val premImgList: ArrayList<String> = ArrayList()
         val praveenImgList: ArrayList<String> = ArrayList()
         val nirmalImgList: ArrayList<String> = ArrayList()
+        val pradeepImgList: ArrayList<String> = ArrayList()
 
 
         naveenImgList.add("https://images.pexels.com/photos/842811/pexels-photo-842811.jpeg?cs=srgb&dl=pexels-andrea-piacquadio-842811.jpg&fm=jpg")
@@ -324,7 +325,9 @@ abstract class MyAppCompatActivity : AppCompatActivity() {
         nirmalImgList.add("https://images.pexels.com/photos/868113/pexels-photo-868113.jpeg?cs=srgb&dl=pexels-mostafa-sannad-868113.jpg&fm=jpg")
         nirmalImgList.add("https://images.pexels.com/photos/878358/pexels-photo-878358.jpeg?cs=srgb&dl=pexels-mostafa-sannad-878358.jpg&fm=jpg")
 
-
+        pradeepImgList.add("https://images.pexels.com/photos/2864797/pexels-photo-2864797.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+        pradeepImgList.add("https://images.pexels.com/photos/1081676/pexels-photo-1081676.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+        pradeepImgList.add("https://images.pexels.com/photos/1431283/pexels-photo-1431283.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
 
         list.add(
 
@@ -372,6 +375,17 @@ abstract class MyAppCompatActivity : AppCompatActivity() {
             )
         )
 
+        list.add(
+            User(
+                7890,
+                "Pradeep",
+                pradeepImgList,
+                "55, Thandalam Village, NH4 Chennai - Bangalore Highway, Sriperumbudur Taluk,Chennai.India",
+                isNew = true,
+                isVerified = true,
+                isPremium = true
+            )
+        )
 
         return list
     }
