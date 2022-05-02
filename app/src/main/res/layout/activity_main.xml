@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_rectangle_background_blue_gradient"
+    tools:context=".views.main.MainActivity">
+
+    <TextView
+        android:id="@+id/matchesTV"
+        style="@style/TextView.White.HeadLine5.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_18x"
+        android:text="My Matches"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/moreIV"
+        android:layout_width="@dimen/width_25x"
+        android:layout_height="@dimen/height_25x"
+        android:layout_margin="@dimen/margin_10x"
+        android:src="@drawable/ic_menu"
+        app:layout_constraintBottom_toBottomOf="@+id/matchesTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/matchesTV" />
+
+
+    <TextView
+        android:id="@+id/pendingTV"
+        style="@style/TextView.White.HeadLine5.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_18x"
+        android:layout_marginTop="@dimen/margin_25x"
+        android:layout_marginEnd="@dimen/margin_18x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moreIV" />
+
+    <TextView
+        android:id="@+id/newCountTV"
+        style="@style/TextView.White"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8x"
+        android:background="@drawable/shape_corner_curved_white_outline_bg"
+        android:paddingStart="@dimen/padding_10x"
+        android:paddingTop="@dimen/padding_5x"
+        android:paddingEnd="@dimen/padding_10x"
+        android:paddingBottom="@dimen/padding_5x"
+        app:layout_constraintBottom_toBottomOf="@id/pendingTV"
+        app:layout_constraintStart_toEndOf="@+id/pendingTV"
+        app:layout_constraintTop_toTopOf="@+id/pendingTV" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pendingProfileRV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10x"
+        android:overScrollMode="never"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newCountTV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

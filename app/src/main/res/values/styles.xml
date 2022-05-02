@@ -1,0 +1,241 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primaryVariant</item>
+        <item name="colorOnPrimary">@color/onPrimary</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondaryVariant</item>
+        <item name="colorOnSecondary">@color/onSecondary</item>
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/onError</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/onSurface</item>
+        <!--        <item name="android:colorBackground">@color/background</item>-->
+        <item name="colorOnBackground">@color/onBackground</item>
+        <item name="android:navigationBarColor">@color/primaryVariant</item>
+
+    </style>
+
+    <style name="TextView.Base" parent="android:Widget.TextView">
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+
+    <!--Black-->
+    <style name="TextView.Black" parent="TextView.Base">
+        <item name="android:textColor">@color/onBackground</item>
+    </style>
+
+    <style name="TextView.Black.Headline4.newYorkRegular" parent="TextView.Black">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline4
+        </item>
+        <item name="android:fontFamily">@font/new_york_regular</item>
+    </style>
+
+
+    <style name="TextView.Black.Headline5.NewYorkRegular" parent="TextView.Black">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline5
+        </item>
+        <item name="android:fontFamily">@font/new_york_regular</item>
+    </style>
+
+    <style name="TextView.Black.Headline5.Bold" parent="TextView.Black">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline5
+        </item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextView.Black.Headline6" parent="TextView.Black">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline6
+        </item>
+    </style>
+
+    <style name="TextView.Black.Headline4.Muli" parent="TextView.Black">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline4
+        </item>
+        <item name="android:fontFamily">@font/muli</item>
+    </style>
+
+    <style name="TextView.Black.Headline4.MuliBold" parent="TextView.Black">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline4
+        </item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+    </style>
+
+    <style name="TextView.Black.Headline3.MuliBold" parent="TextView.Black">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline3
+        </item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+    </style>
+
+
+    <style name="TextView.Black.SubTitle1.MuliBold" parent="TextView.Black">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1
+        </item>
+        <item name="android:fontFamily">@font/muli_bold</item>
+    </style>
+
+    <style name="TextView.Black.SubTitle1.MuliSemiBold" parent="TextView.Black">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1
+        </item>
+        <item name="android:fontFamily">@font/muli_semi_bold</item>
+    </style>
+
+    <style name="TextView.Black.Body1.Muli" parent="TextView.Black">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body1</item>
+        <item name="android:fontFamily">@font/muli</item>
+    </style>
+
+    <style name="TextView.Black.Body1.Bold" parent="TextView.Black">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body1</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="TextView.Black.Body1.MuliSemiBold" parent="TextView.Black">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body1</item>
+        <item name="android:fontFamily">@font/muli_semi_bold</item>
+    </style>
+
+    <style name="TextView.Black.Headline4.MuliSemiBold" parent="TextView.Black">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline4
+        </item>
+        <item name="android:fontFamily">@font/muli_semi_bold</item>
+
+    </style>
+
+    <style name="TextView.Black.Headline5.MuliSemiBold" parent="TextView.Black">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline5
+        </item>
+        <item name="android:fontFamily">@font/muli_semi_bold</item>
+
+    </style>
+
+
+    <!--White-->
+    <style name="TextView.White" parent="TextView.Base">
+        <item name="android:textColor">@color/background</item>
+    </style>
+
+    <style name="TextView.White.Subtitle1.MuliSemiBold" parent="TextView.White">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1
+        </item>
+        <item name="android:fontFamily">@font/muli_semi_bold</item>
+
+    </style>
+
+
+    <style name="TextView.White.HeadLine5.MuliSemiBold" parent="TextView.White">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline5
+        </item>
+        <item name="android:fontFamily">@font/muli_semi_bold</item>
+
+    </style>
+
+    <style name="TextView.White.HeadLine5.Bold" parent="TextView.White">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline5
+        </item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="TextView.White.HeadLine5.Muli" parent="TextView.White">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline5
+        </item>
+        <item name="android:fontFamily">@font/muli</item>
+
+    </style>
+
+    <style name="TextView.White.HeadLine6.Muli" parent="TextView.White">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline6
+        </item>
+        <item name="android:fontFamily">@font/muli</item>
+
+    </style>
+
+    <style name="TextView.White.Headline5.NewYorkRegular.Bold" parent="TextView.White">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline5
+        </item>
+        <item name="android:fontFamily">@font/new_york_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <!--Primary-->
+    <style name="TextView.Primary" parent="TextView.Base">
+        <item name="android:textColor">@color/primary</item>
+    </style>
+
+    <style name="TextView.Primary.HeadLine5.MuliSemiBold" parent="TextView.Primary">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline5
+        </item>
+        <item name="android:fontFamily">@font/muli_semi_bold</item>
+    </style>
+
+    <style name="TextView.Primary.HeadLine5.Muli" parent="TextView.Primary">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline5
+        </item>
+        <item name="android:fontFamily">@font/muli</item>
+    </style>
+
+    <style name="TextView.Primary.HeadLine6.MuliSemiBold" parent="TextView.Primary">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline5
+        </item>
+        <item name="android:fontFamily">@font/muli_semi_bold</item>
+    </style>
+
+    <style name="TextView.Primary.SubTitle1.Muli" parent="TextView.Primary">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1
+        </item>
+        <item name="android:fontFamily">@font/muli</item>
+    </style>
+
+
+    <style name="TextView.Primary.HeadLine4.MuliSemiBold" parent="TextView.Primary">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline4
+        </item>
+        <item name="android:fontFamily">@font/muli_semi_bold</item>
+    </style>
+
+    <style name="TextView.Primary.HeadLine4.Muli" parent="TextView.Primary">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline4
+        </item>
+        <item name="android:fontFamily">@font/muli</item>
+    </style>
+
+    <style name="TextView.Primary.HeadLine3.Muli" parent="TextView.Primary">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline3
+        </item>
+        <item name="android:fontFamily">@font/muli</item>
+    </style>
+
+    <style name="TextView.Primary.Body1.Muli" parent="TextView.Primary">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body1</item>
+        <item name="android:fontFamily">@font/muli</item>
+    </style>
+
+    <style name="TextView.Primary.Headline5.NewYorkRegular" parent="TextView.Primary">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline5
+        </item>
+        <item name="android:fontFamily">@font/new_york_regular</item>
+    </style>
+
+    <style name="TextView.Primary.Headline5.NewYorkRegular.Bold" parent="TextView.Primary">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline5
+        </item>
+        <item name="android:fontFamily">@font/new_york_regular</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MyEditTextTheme">
+        <item name="android:textColorHint">@color/onSecondary</item>
+        <item name="colorControlNormal">@color/onBackground</item>
+        <item name="colorControlActivated">@color/primary</item>
+        <item name="colorControlHighlight">@color/primary</item>
+    </style>
+
+
+</resources>

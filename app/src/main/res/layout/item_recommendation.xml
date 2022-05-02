@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="recommended"
+            type="com.naveen.matrimony.model.RecommendedUser" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_5x"
+        app:cardCornerRadius="@dimen/margin_10x"
+        app:cardElevation="@dimen/margin_10x"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/profileCL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/profileIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_350x"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintTop_toTopOf="parent"
+                    bind:src="@{recommended.profileImgList[0]}" />
+
+                <TextView
+                    android:id="@+id/countTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_8x"
+                    android:background="@drawable/shape_corner_curved_balck_transparent_filled_bg"
+                    android:drawablePadding="@dimen/padding_2x"
+                    android:padding="@dimen/padding_5x"
+                    android:text="3"
+                    app:drawableStartCompat="@drawable/ic_collections"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <TextView
+                android:id="@+id/verifiedTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_15x"
+                android:drawablePadding="@dimen/padding_8x"
+                android:gravity="center_vertical"
+                android:text="@string/verified"
+                app:drawableStartCompat="@drawable/ic_verified"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profileCL"
+                bind:gone="@{recommended.isVerified()}" />
+
+            <TextView
+                android:id="@+id/premiumTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_15x"
+                android:drawablePadding="@dimen/padding_8x"
+                android:gravity="center_vertical"
+                android:text="@string/premium_nri"
+                app:drawableStartCompat="@drawable/ic_premium"
+                app:layout_constraintStart_toEndOf="@+id/verifiedTV"
+                app:layout_constraintTop_toBottomOf="@+id/profileCL"
+                bind:visibility="@{recommended.isPremium()}" />
+
+
+            <TextView
+                android:id="@+id/nameTV"
+                style="@style/TextView.Black.Headline5.Bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15x"
+                android:layout_marginTop="@dimen/margin_8x"
+                android:text="@{recommended.name}"
+                app:layout_constraintTop_toBottomOf="@+id/premiumTV" />
+
+            <TextView
+                android:id="@+id/addressTV"
+                style="@style/TextView.Black.SubTitle1.MuliSemiBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_15x"
+                android:layout_marginTop="@dimen/margin_8x"
+                android:layout_marginEnd="@dimen/margin_15x"
+                android:ellipsize="end"
+                android:maxLines="4"
+                android:minLines="4"
+                android:text="@{recommended.address}"
+                app:layout_constraintTop_toBottomOf="@+id/nameTV" />
+
+
+            <View
+                android:id="@+id/dummyView"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="@dimen/margin_15x"
+                android:background="@color/amber"
+                app:layout_constraintTop_toBottomOf="@+id/addressTV" />
+
+            <ImageView
+                android:id="@+id/shortListIV"
+                android:layout_width="@dimen/width_25x"
+                android:layout_height="@dimen/height_25x"
+                android:layout_marginStart="@dimen/margin_15x"
+                android:src="@drawable/ic_shortlist"
+                app:layout_constraintBottom_toBottomOf="@+id/shortListTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/shortListTV" />
+
+
+            <TextView
+                android:id="@+id/shortListTV"
+                style="@style/TextView.Black.Body1.Muli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_5x"
+                android:text="@string/shortlist"
+                app:layout_constraintBottom_toBottomOf="@+id/likeHerTV"
+                app:layout_constraintStart_toEndOf="@+id/shortListIV"
+                app:layout_constraintTop_toTopOf="@+id/likeHerTV" />
+
+
+            <TextView
+                android:id="@+id/likeHerTV"
+                style="@style/TextView.Black.Body1.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8x"
+                android:text="@string/like_him"
+                app:layout_constraintBottom_toBottomOf="@+id/actionLL"
+                app:layout_constraintStart_toEndOf="@+id/shortListTV"
+                app:layout_constraintTop_toTopOf="@+id/actionLL" />
+
+            <LinearLayout
+                android:id="@+id/actionLL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10x"
+                android:layout_marginBottom="@dimen/margin_10x"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/likeHerTV"
+                app:layout_constraintTop_toBottomOf="@+id/dummyView">
+
+
+                <FrameLayout
+                    android:id="@+id/rejectFL"
+
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_5x"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_corner_curved_balck_transparent_filled_bg"
+                    android:padding="@dimen/padding_5x">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_close" />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/acceptFL"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="@dimen/margin_8x"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_corner_curved_yellow_filled"
+                    android:padding="@dimen/padding_5x">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_done" />
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

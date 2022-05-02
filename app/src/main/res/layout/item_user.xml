@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.naveen.matrimony.model.User" />
+
+        <variable
+            name="viewHolder"
+            type="com.naveen.matrimony.adapters.PendingProfileRecyclerAdapter.ViewHolder" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/margin_8x"
+        android:padding="@dimen/padding_5x"
+        app:cardCornerRadius="@dimen/margin_12x"
+        app:cardElevation="@dimen/margin_3x">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/profileIV"
+                android:layout_width="@dimen/width_200x"
+                android:layout_height="@dimen/height_200x"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                bind:src="@{user.profileImgList[0]}" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10x"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profileIV">
+
+
+                <TextView
+                    android:id="@+id/nameTV"
+                    style="@style/TextView.Black.SubTitle1.MuliBold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{user.name}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/addressTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="4"
+                    android:minLines="4"
+                    android:text="@{user.address}"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nameTV" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_8x"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/addressTV">
+
+                    <TextView
+                        android:id="@+id/yesTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_corner_curved_yellow_filled"
+                        android:paddingStart="@dimen/padding_15x"
+                        android:paddingTop="@dimen/padding_5x"
+                        android:paddingEnd="@dimen/padding_15x"
+                        android:paddingBottom="@dimen/padding_5x"
+                        android:text="Yes" />
+
+                    <TextView
+                        android:id="@+id/noTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10x"
+                        android:background="@drawable/shape_corner_curved_gery_outline_bg"
+                        android:paddingStart="@dimen/padding_15x"
+                        android:paddingTop="@dimen/padding_5x"
+                        android:paddingEnd="@dimen/padding_15x"
+                        android:paddingBottom="@dimen/padding_5x"
+                        android:text="No" />
+
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
