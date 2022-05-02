@@ -6,6 +6,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import coil.load
+import coil.request.CachePolicy
 import com.naveen.matrimony.R
 
 
@@ -57,6 +58,7 @@ class User {
             imageView.load(resource) {
                 placeholder(R.drawable.ic_placeholder)
                 crossfade(true)
+                memoryCachePolicy(CachePolicy.ENABLED)
             }
         }
     }
