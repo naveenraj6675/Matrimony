@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_18x"
-        android:text="My Matches"
+        android:text="@string/my_matches"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,6 +34,8 @@
         style="@style/TextView.White.HeadLine5.Bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
         android:layout_marginStart="@dimen/margin_18x"
         android:layout_marginTop="@dimen/margin_25x"
         android:layout_marginEnd="@dimen/margin_18x"
